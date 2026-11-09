@@ -14,9 +14,13 @@ How did 2025 wholesale electricity prices in the BGE zone (central Maryland) com
 
 ![BGE day-ahead vs. real-time price duration curves](exhibits/02_bge_price_duration.png)
 
-**3. Hour by hour, real-time and day-ahead differed by more than $50/MWh in about 9% of hours.** Real-time exceeded day-ahead by $50+ in 4.9% of hours. The largest gaps clustered in a few events; the biggest was on June 24, when real-time exceeded day-ahead by about $1,482.90/MWh.
+**3 Real-time and Day-ahead prices rose above $100/MWh for about 10% of 2025 hours
 
-![Largest daily real-time minus day-ahead gap at BGE](exhibits/03_bge_rt_minus_da_hourly.png)
+![BGE day-ahead vs. real-time price duration curves](exhibits/03_bge_price_duration.png)
+
+**4. Hour by hour, real-time and day-ahead differed by more than $50/MWh in about 9% of hours.** Real-time exceeded day-ahead by $50+ in 4.9% of hours. The largest gaps clustered in a few events; the biggest was on June 24, when real-time exceeded day-ahead by about $1,482.90/MWh.
+
+![Largest daily real-time minus day-ahead gap at BGE](exhibits/04_bge_rt_minus_da_hourly.png)
 
 ## Data
 
