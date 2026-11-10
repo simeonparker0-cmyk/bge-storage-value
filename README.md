@@ -24,10 +24,10 @@ How did 2025 wholesale electricity prices in the BGE zone (central Maryland) com
 
 ## Data
 
-Source: PJM Data Miner 2 (dataminer2.pjm.com), downloaded manually on [dates].
+Source: PJM Data Miner 2 (dataminer2.pjm.com), downloaded manually on 10/12/2026.
 
 - Day-ahead hourly LMPs (`da_hrl_lmps`) and real-time hourly LMPs (`rt_hrl_lmps`)
-- Nodes: BGE (zone, pnode ID 51292) and WESTERN HUB (hub, pnode ID [ID])
+- Nodes: BGE (zone, pnode ID 51292) and WESTERN HUB (hub, pnode ID 9665)
 - Period: January 1 to December 31, 2025, all 8,760 hours
 - Filtered by Pnode Name. Filtering by Zone returns every pricing node inside the zone.
 - The date range must run through the end of December 31. Ending at "12/31/2025" returns only the first hour of that day.
@@ -38,7 +38,7 @@ Raw files go in `data/raw/` and are not tracked in Git. Re-download using the se
 
 - Loaded each file with explicit timestamp formats, kept only current rows, and indexed on UTC. Eastern time is used only for calendar grouping and labels, because daylight saving time makes one Eastern hour repeat in November and one disappear in March.
 - Validated each file with assert checks: 8,760 rows per node and market, no duplicate timestamps, no missing prices.
-- Combined all four series into one long table and checked that energy + congestion + losses = LMP in every hour, and that the energy component is identical at both nodes. Because energy is identical, the BGE-to-hub spread is entirely congestion and losses.
+- Combined all four series into one long table and checked that energy + congestion + losses = LMP in every hour, and that the energy component is identical in both node clusters. Because energy is identical, the BGE-to-Western Hub spread is entirely congestion and losses.
 - Hourly comparisons match day-ahead and real-time prices on UTC timestamps.
 
 ## Limitations
