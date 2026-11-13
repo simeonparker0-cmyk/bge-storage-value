@@ -6,28 +6,28 @@ How did 2025 wholesale electricity prices in the BGE zone (central Maryland) com
 
 ## Findings
 
-**1. BGE's day-ahead price averaged $7.13/MWh above Western Hub, mostly from congestion.** About 80% of the average premium ($5.72/MWh) came from the congestion component and about 20% ($1.41/MWh) from losses. The premium varied widely by month, from $1.30/MWh in February to $11.44/MWh in June. In December, the congestion component favored BGE with a monthly average of -$2.18/MWh.
+**1. BGE's day-ahead price averaged $7.13/MWh above Western Hub, mostly from congestion.** About 80% of the average premium ($5.72/MWh) came from the congestion component and about 20% ($1.41/MWh) from losses. The premium varied widely by month, from $1.30/MWh in February to $11.44/MWh in June. In December, the congestion component favored BGE (-$3.42/MWh), leaving BGE's average price $2.18/MWh below Western Hub's.
 
 ![BGE premium over Western Hub by month](exhibits/01_bge_premium_monthly.png)
 
-**2. Real-time and day-ahead price distributions at BGE were similar except at the extreme top.** Day-ahead prices ranged from $11.91 to $609.74/MWh. Real-time prices reached $2,022/MWh. Comparing the two distributions percentile by percentile, they were within $28/MWh about one standard deviation of the gap of each other except in the highest-priced ~3% of hours.
+**2. Real-time and day-ahead price distributions at BGE were similar except at the extreme top.** Day-ahead prices ranged from $11.91 to $609.74/MWh. Real-time prices reached $2,022/MWh. Comparing the two distributions percentile by percentile, they were within $28/MWh of each other (about one standard deviation of the gap) except in the highest-priced ~3% of hours.
 
 ![BGE day-ahead vs. real-time price duration curves](exhibits/02_bge_price_duration.png)
 
-**3. Real-time and Day-ahead prices rose above $100/MWh for about 10% of 2025 hours.**
+**3. Day-ahead and real-time prices were above $100/MWh in about 10% of 2025 hours.** Day-ahead exceeded $100/MWh in 9.5% of hours and real-time in 9.8%. The chart below caps the axis at $400/MWh to show the body of the distribution.
 
-![BGE day-ahead vs. real-time price duration curves](exhibits/03_bge_price_duration.png)
+![BGE price duration curves, axis capped at $400/MWh](exhibits/03_bge_price_duration.png)
 
-**4. Hour by hour, real-time and day-ahead differed by more than $50/MWh in about 9% of hours.** Real-time exceeded day-ahead by $50+ in 4.9% of hours. The largest gaps clustered in a few events; the biggest was on June 24, when real-time exceeded day-ahead by about $1,482.90/MWh.
+**4. Hour by hour, real-time and day-ahead differed by more than $50/MWh in about 9% of hours.** Real-time exceeded day-ahead by $50+ in 4.9% of hours. On average, real-time ran slightly below day-ahead (by $0.87/MWh). The largest gaps clustered in a few events; the biggest was on June 24, when real-time exceeded day-ahead by about $1,482.90/MWh.
 
 ![Largest daily real-time minus day-ahead gap at BGE](exhibits/04_bge_rt_minus_da_hourly.png)
 
 ## Data
 
-Source: PJM Data Miner 2 (dataminer2.pjm.com), downloaded manually on [dates].
+Source: PJM Data Miner 2 (dataminer2.pjm.com), downloaded manually on October 10–12, 2026.
 
 - Day-ahead hourly LMPs (`da_hrl_lmps`) and real-time hourly LMPs (`rt_hrl_lmps`)
-- Nodes: BGE (zone, pnode ID 51292) and WESTERN HUB (hub, pnode ID [ID])
+- Nodes: BGE (zone, pnode ID 51292) and WESTERN HUB (hub, pnode ID 51288)
 - Period: January 1 to December 31, 2025, all 8,760 hours
 - Filtered by Pnode Name. Filtering by Zone returns every pricing node inside the zone.
 - The date range must run through the end of December 31. Ending at "12/31/2025" returns only the first hour of that day.
